@@ -125,14 +125,19 @@ Para instalar o projeto é necessario:
 git clone https://github.com/lizzpn/Snakegame.git
 ```
 
-2° Entrar na pagina do projeto 
+2° Entrar no diretório do projeto 
 ```
 cd snakegame
 ```
 
 3° Compilar o projeto utilizando o arquivo Makefile
 ```
-Make
+Make all
+```
+
+4° Executar o jogo
+```
+./bin/snakegame.out
 ```
 > [!TIP]
 > A página principal do repositório pode ser acessada pelo link a seguir:
