@@ -1,4 +1,4 @@
-# Jogo da cobrinha
+#Jogo da cobrinha
 UNIVERSIDADE FEDERAL DE MINAS GERAIS
 
 Escola de Engenharia Departamento de Engenharia Elétrica
@@ -23,15 +23,18 @@ Trabalho de Programação e Desenvolvimento de Software II
 
 
 
-## INDICE 
-1. CARTÕES CRC
-2. USER STORIES
-3. PROJETO NO GIT
-4. DOCUMENTAÇÃO
+
+
+Belo Horizonte 2024
+## INDICE
+1. [CARTÕES CRC](#cartões-crc)
+2. [USER STORIES](#user-stories)
+3. [INTALAÇÃO](#instalação)
+4. [DOCUMENTAÇÃO](#documentação)
 
 ## CARTÕES CRC
 
-### SNAKE
+### SNAKE:
 
  Responsabilidades:
  
@@ -59,7 +62,7 @@ Trabalho de Programação e Desenvolvimento de Software II
  
   • Ajustar a velocidade da cobra de acordo com o modo de jogo
 
-### COMIDA
+### COMIDA:
 
 Responsabilidades:
 
@@ -73,7 +76,7 @@ Colaborações:
 
 • Ajustar o intervalo de tempo que a comida irá aparecer de acordo com o modo de jogo escolhido
 
-### MENU
+### MENU:
 
 Responsabilidades:
 
@@ -213,11 +216,17 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
 °O menu principal é fácil de navegar com opções claras como "Iniciar Jogo" e "Modo de jogo".
 
 
-## PROJETO NO GITHUB
+## INSTALAÇÃO
+Para instalar o projeto é necessario:
 
-O projeto pode ser clonado a partir do seguinte link:
+  1° Clonar o repositorio
+  git clone [https://](https://github.com/lizzpn/Snakegame.git)
 
-https://github.com/lizzpn/Snakegame.git
+  2° Entrar na pagina do projeto 
+  cd snakegame
+
+  3° Compilar o projeto utilizando o arquivo Makefile
+  Make
 
 A página principal pode ser acessada pelo link a seguir:
 
