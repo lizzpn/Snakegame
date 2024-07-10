@@ -1,3 +1,4 @@
+# Jogo da cobrinha
 UNIVERSIDADE FEDERAL DE MINAS GERAIS
 
 Escola de Engenharia Departamento de Engenharia Elétrica
@@ -22,14 +23,15 @@ Trabalho de Programação e Desenvolvimento de Software II
 
 
 
+## INDICE 
+1. CARTÕES CRC
+2. USER STORIES
+3. PROJETO NO GIT
+4. DOCUMENTAÇÃO
 
+## CARTÕES CRC
 
-Belo Horizonte 2024
-
-
-CARTÕES CRC
-
-° SNAKE:
+### SNAKE
 
  Responsabilidades:
  
@@ -57,7 +59,7 @@ CARTÕES CRC
  
   • Ajustar a velocidade da cobra de acordo com o modo de jogo
 
-°COMIDA:
+### COMIDA
 
 Responsabilidades:
 
@@ -71,7 +73,7 @@ Colaborações:
 
 • Ajustar o intervalo de tempo que a comida irá aparecer de acordo com o modo de jogo escolhido
 
-MENU:
+### MENU
 
 Responsabilidades:
 
@@ -94,11 +96,11 @@ Colaborações:
 
 
 
-USER STORIES
+## USER STORIES
 
 As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a seguir:
 
-1.FUNCIONALIDADES DO JOGO
+### FUNCIONALIDADES DO JOGO
 
 1.1.INICIAR UM NOVO JOGO
 
@@ -165,7 +167,7 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
 
 °A pontuação do jogador aumenta ao coletar alimentos.
 
-2.CONTROLES E INTERAÇÃO
+### CONTROLES E INTERAÇÃO
 
 2.1 CONTROLAR A DIREÇÃO DA COBRA
 
@@ -200,7 +202,7 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
 
 °Uma mensagem de "Game Over" aparece na tela após uma colisão.
 
-3.EXPERIENCIA DO USUÁRIO
+### EXPERIENCIA DO USUÁRIO
 
 3.1.INTERFACE DE USUÁRIO CLARA E INTUITIVA
 
@@ -211,18 +213,19 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
 °O menu principal é fácil de navegar com opções claras como "Iniciar Jogo" e "Modo de jogo".
 
 
-PROJETO NO GITHUB
+## INSTALAÇÃO
+Para instalar e configurar o programa é necessario:
 
-O projeto pode ser clonado a partir do seguinte link:
+    1°- Clonar o repositorio do projeto 
+    git clone https://github.com/lizzpn/Snakegame.git
 
-https://github.com/lizzpn/Snakegame.git
+    2°- Entrar na pasta referente ao jogo
+    cd  snakegame
 
-A página principal pode ser acessada pelo link a seguir:
+    3°- Para compilar o jogo utilizando o arquivo makefile 
+    make
 
-https://github.com/lizzpn/Snakegame
-
-
-DOCUMENTAÇÃO
+## DOCUMENTAÇÃO
 
 •História e Desenvolvimento
 
