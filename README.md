@@ -213,16 +213,17 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
 °O menu principal é fácil de navegar com opções claras como "Iniciar Jogo" e "Modo de jogo".
 
 
-## PROJETO NO GITHUB
+## INSTALAÇÃO
+Para instalar e configurar o programa é necessario:
 
-O projeto pode ser clonado a partir do seguinte link:
+    1°- Clonar o repositorio do projeto 
+    git clone https://github.com/lizzpn/Snakegame.git
 
-https://github.com/lizzpn/Snakegame.git
+    2°- Entrar na pasta referente ao jogo
+    cd  snakegame
 
-A página principal pode ser acessada pelo link a seguir:
-
-https://github.com/lizzpn/Snakegame
-
+    3°- Para compilar o jogo utilizando o arquivo makefile 
+    make
 
 ## DOCUMENTAÇÃO
 
