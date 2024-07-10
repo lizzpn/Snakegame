@@ -156,4 +156,5 @@ Durante o jogo, é possível visualizar a pontuação atual e os recordes anteri
 
 Os controles são simples, utilizando as teclas de seta para movimentar a cobra, e uma tecla específica para sair do jogo, com um prompt de confirmação para evitar saídas acidentais. A interface é clara e intuitiva, com um menu principal de fácil navegação, e o jogo notifica o jogador com uma mensagem de "Game Over" quando ocorre uma colisão.
 
-[Trabalho PDS 2.pdf](https://github.com/user-attachments/files/16154578/Trabalho.PDS.2.pdf)
+> [!IMPORTANT]
+> Uma sessão dedicada à documentação pode ser acessada no arquivo [docs](https://github.com/lizzpn/Snakegame/tree/main/docs) desse repositório:
