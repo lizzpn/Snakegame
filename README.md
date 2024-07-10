@@ -127,7 +127,7 @@ git clone https://github.com/lizzpn/Snakegame.git
 
 2° Entrar no diretório do projeto 
 ```
-cd snakegame
+cd snakegame/codigo/
 ```
 
 3° Compilar o projeto utilizando o arquivo Makefile
