@@ -29,7 +29,7 @@ Belo Horizonte 2024
 ## INDICE
 1. [CARTÕES CRC](#cartões-crc)
 2. [USER STORIES](#user-stories)
-3. [INTALAÇÃO](#instalação)
+3. [INSTALAÇÃO](#instalação)
 4. [DOCUMENTAÇÃO](#documentação)
 
 ## CARTÕES CRC
