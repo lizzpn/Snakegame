@@ -31,10 +31,10 @@ void Snake::mover_cobra()
         case 'b': posicao.Y += velocidade_cobra; 
         break;
         //e: para esquerda
-        case 'e': posicao.Y -= velocidade_cobra; 
+        case 'e': posicao.X -= velocidade_cobra; 
         break;
         //d: para direita
-        case 'd': posicao.Y -= velocidade_cobra; 
+        case 'd': posicao.X += velocidade_cobra; 
         break;
     }
 }
