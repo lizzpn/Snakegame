@@ -1,4 +1,6 @@
 #include <iostream>
+
+#include "Snake.h"
 #include "Food.h"
 
 using namespace std;
