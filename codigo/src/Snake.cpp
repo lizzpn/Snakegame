@@ -1,5 +1,12 @@
 #include "Snake.h"
 
+
+Snake::Snake()
+{
+    this->coordenadas = (0,0);
+    this->velocidade_cobra = 1;
+}
+
 Snake::Snake(COORD posicao, int velocidade)
 {
     // Atribui os parâmetros passados às variáveis private
