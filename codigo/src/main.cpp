@@ -1,2 +1,11 @@
+#include <iostream>
 #include "Food.h"
-using namespace TP1;
+
+using namespace std;
+
+int main()
+{
+    // Adicionar funções
+
+    return 0;
+}
