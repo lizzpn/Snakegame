@@ -38,7 +38,7 @@ class Snake
         bool colidiu();
 
         // Função para detectar quando a cobra comeu o alimento
-        bool comeu();
+        bool comeu(COORD comida_coord);
 
 };
 
