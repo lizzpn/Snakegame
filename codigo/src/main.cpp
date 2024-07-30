@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime>
+#include <conio.h>
 
 #include "Snake.h"
 #include "Food.h"
