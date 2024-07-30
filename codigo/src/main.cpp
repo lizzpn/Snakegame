@@ -26,10 +26,30 @@ int main()
     {
         // Programa rodando
         //todo adicionar funções
+        //board() ->adicionar função do tabuleiro
+
+        //kbhit(): verifica se alguma tecla foi pressionada no tabuleiro sem que tenha que parar o loop/programa
+        if(kbhit())
+        {
+            //getch(): retotna a tecla pressionada pelo usuário 
+            switch(getch())
+            {
+                //aloca as teclas "w,a,s,d" para os caracteres cima, baixo, direite e esquerda
+                case 'w': cobra.mudar_direcao('c');
+                break;
+                case 'd': cobra.mudar_direcao('d');
+                break;
+                case 'a': cobra.mudar_direcao('e');
+                break;
+                case 's': cobra.mudar_direcao('b');
+                break;
+            }
+            cobra.mover_cobra();
+        }
 
         //! Condição do fim do jogo -> parada do loop
         if (cobra.colidiu()) fim_de_jogo = true;
     }
-
+    
     return 0;
 }
