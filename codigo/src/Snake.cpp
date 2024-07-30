@@ -56,7 +56,7 @@ bool Snake::colidiu()
 {
     // Como a parede foi definida na posição (0, 0), caso a posição inferior dela seja menor que 1, significa que encostou na parede, e deverá ser detectado que ela colidiu.
     // Ademais caso a posição superior da cobra seja maior que os limites definidos da parede, significa que encostou na parede, detectando também que ela colidiu.
-    if (coordenadas.X < 1 || coordenadas.Y < 1 || coordenadas.X > X_tabuleiro || coordenadas.Y > Y_tabuleiro) return true;
+    if (coordenadas.X < 1 || coordenadas.Y < 1 || coordenadas.X > x_tabuleiro || coordenadas.Y > y_tabuleiro) return true;
     else return false;
 }
 
