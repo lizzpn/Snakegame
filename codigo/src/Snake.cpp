@@ -37,7 +37,7 @@ void Snake::mover_cobra()
         break;
     }
 }
-
+//ao comer a comida a cobra aumenta 1 unidade de tamanho
 void Snake::crescimento()
 {
     tamanho_cobra++;
