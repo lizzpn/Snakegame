@@ -1,5 +1,9 @@
 #include "Snake.h"
 
+// Definir o tamanho do tabuleiro
+#define x_tabuleiro 50
+#define y_tabuleiro 25
+
 Snake::Snake(COORD posicao_inicial, int velocidade_inicial)
 {
     // Atribui os parâmetros passados às variáveis private
@@ -11,6 +15,11 @@ Snake::Snake(COORD posicao_inicial, int velocidade_inicial)
 
     // Posição "nula", visto que a cobra é iniciada parada
     direcao_cobra = 'n';
+}
+
+COORD Snake::obter_posicao()
+{
+    return coordenadas;
 }
 
 void Snake::mudar_direcao(char nova_direcao)
@@ -41,6 +50,14 @@ void Snake::mover_cobra()
 void Snake::crescimento()
 {
     tamanho_cobra++;
+}
+
+bool Snake::colidiu()
+{
+    // Como a parede foi definida na posição (0, 0), caso a posição inferior dela seja menor que 1, significa que encostou na parede, e deverá ser detectado que ela colidiu.
+    // Ademais caso a posição superior da cobra seja maior que os limites definidos da parede, significa que encostou na parede, detectando também que ela colidiu.
+    if (coordenadas.X < 1 || coordenadas.Y < 1 || coordenadas.X > X_tabuleiro || coordenadas.Y > Y_tabuleiro) return true;
+    else return false;
 }
 
 bool Snake::comeu(COORD comida_coord)
