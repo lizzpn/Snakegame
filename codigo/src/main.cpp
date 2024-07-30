@@ -3,7 +3,7 @@
 #include <conio.h>
 
 #include "Snake.h"
-#include "Food.h"
+#include "Food.hpp"
 
 using namespace std;
 
