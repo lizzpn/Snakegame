@@ -37,3 +37,21 @@ void Snake::mover_cobra()
         break;
     }
 }
+
+void Snake::crescimento()
+{
+    tamanho_cobra++;
+}
+
+bool Snake::comeu(COORD comida_coord)
+{
+    //informa verdadeiro caso as coordenadas comida e snake são as mesmas (informa se foi comido)
+    if(comida_coord.X == coordenadas.X && comida_coord.Y == coordenadas.Y)
+    {
+        return true;
+    }
+    else 
+    {
+        return false;
+    }
+}
