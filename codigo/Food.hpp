@@ -1,6 +1,6 @@
 #ifndef FOOD_H
 #define FOOD_H
-
+#include <windowns>
 //preciso logo das cordenas para fazer as funções 
 //coordenadas, coor aleatorias, 
 class Food {
