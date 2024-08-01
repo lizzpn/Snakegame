@@ -11,12 +11,36 @@ using namespace std;
 #define x_tabuleiro 50
 #define y_tabuleiro 25
 
+// Chamada da função da Cobra, com posição e velocidades arbitrárias
+Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
+
+void board()
+{
+    COORD cobra_posicao = cobra.obter_posicao();
+    for(int i = 0; i < y_tabuleiro; i++)
+    {
+        //printando o tabuleiro com # em sua volta e espaços em branco no meio
+        //rever como printar a cobrinha
+        cout<<"\t\t#";
+        for(int j = 0; j < x_tabuleiro; j++)
+        {
+            if(i == 0 || i == y_tabuleiro - 1)
+            {
+                cout<< '#';
+            }
+            else if(i == cobra_posicao.Y && j == cobra_posicao.X)
+            {
+                //implementar pós alterções
+            }
+            else cout<< ' ';
+        }
+        cout<<"#\n";
+    }
+}
+
 int main()
 {
     //todo Adicionar chamadas e classes
-
-    // Chamada da função da Cobra, com posição e velocidades arbitrárias
-    Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
 
     // Variável que controlará o loop que rodá o jogo
     bool fim_de_jogo = false;
@@ -49,6 +73,15 @@ int main()
 
         //! Condição do fim do jogo -> parada do loop
         if (cobra.colidiu()) fim_de_jogo = true;
+
+        // Obtém o handle para o dispositivo de saída padrão (console)
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+        // Define a estrutura COORD com a posição (0, 0) - canto superior esquerdo do console
+        COORD pos = {0, 0};
+
+        // Move o cursor do console para a posição especificada em 'pos'
+        SetConsoleCursorPosition(hConsole, pos);        
     }
     
     return 0;
