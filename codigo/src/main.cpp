@@ -32,6 +32,7 @@ void board()
             {
                 //implementar pós alterções
             }
+            //adicionar else if da comida
             else cout<< ' ';
         }
         cout<<"#\n";
