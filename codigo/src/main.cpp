@@ -14,6 +14,7 @@ using namespace std;
 // Chamada da função da Cobra, com posição e velocidades arbitrárias
 Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
 
+
 void board()
 {
     COORD cobra_posicao = cobra.obter_posicao();
@@ -41,8 +42,10 @@ void board()
 
 int main()
 {
+    // Usar a hora atual como semente para o gerador de números aleatórios
+    srand(time(0));
     //todo Adicionar chamadas e classes
-
+    
     // Variável que controlará o loop que rodá o jogo
     bool fim_de_jogo = false;
 

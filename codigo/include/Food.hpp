@@ -1,8 +1,7 @@
-#ifndef FOOD_H
-#define FOOD_H
+#ifndef Food_H
+#define Food_H
 #include <windows.h>
-//preciso logo das coordenas para fazer as funções 
-//coordenadas, coor aleatorias, 
+
 class Food {
 
 public:
