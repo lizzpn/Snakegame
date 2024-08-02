@@ -1,16 +1,17 @@
-#include "Food.h"
 #include <vector>
 #include <cstdlib>
+#include "Food.h"
 
-Food::Food(){
-    criar_comidinha();
+Food::food(x.tabuleiro, y.tabuleiro){
+    criar_comidinha(x.tabuleiro, y.tabuleiro);
 }
-&vector<int> Food::coor_comidinha(){
-    return coordenada;
+
+void Food::criar_comidinha(x_tabuleiro, y_tabuleiro){
+    //srand(time(0)); // Usar a hora atual como semente para o gerador de números aleatórios (deve ser feito na main)
+     comidinha.X = rand() % (x_tabuleiro);
+     comidinha.Y = rand() % (y_tabuleiro);
 }
-void Food::criar_comidinha(int tabuleiro_max_x, int tabuleiro_max_y){
-    //std::srand(std::time(0)); // Usar a hora atual como semente para o gerador de números aleatórios
-    int x = rand() % tabuleiro_max_x;
-    int y = rand() % tabuleiro_max_y;
-    coordenada = {x,y};
-}
+
+COORD Food::coor_comidinha(){
+    return comidinha;
+} 
