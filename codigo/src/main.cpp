@@ -31,7 +31,7 @@ void board()
             }
             else if(i == cobra_posicao.Y && j == cobra_posicao.X)
             {
-                //implementar pós alterções
+                cout<< "0";
             }
             //adicionar else if da comida
             else cout<< ' ';
