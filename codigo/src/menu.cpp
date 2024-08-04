@@ -1,18 +1,4 @@
-#include <iostream>
-using namespace std;
-
-enum ModoDeJogo { CARREIRA, SOBREVIVENCIA };
-enum NivelDificuldade { FACIL, MEDIO, DIFICIL };
-
-void displayMenu();
-void iniciarNovoJogo(ModoDeJogo modo, NivelDificuldade nivel);
-void Instrucoes();
-void alterarModoDeJogo(ModoDeJogo& modo);
-void RegrasModo(ModoDeJogo modo);
-void Dificuldade(NivelDificuldade& nivel);
-void mostrarDiferencasNiveis();
-void sairDoJogo();
-void pausa();
+#include "menu.h"
 
 int main() {
     int escolha;
@@ -20,7 +6,7 @@ int main() {
     ModoDeJogo modoAtual = CARREIRA;
     NivelDificuldade nivelAtual = FACIL;
 
-    while (executando) { //selecao no display
+    while (executando) {
         displayMenu();
         cin >> escolha;
 
@@ -54,7 +40,7 @@ int main() {
     return 0;
 }
 
-void displayMenu() { //menu completo que aparece sempre apos apertar a tecla Enter
+void displayMenu() {
     cout << "=============================" << endl;
     cout << "        SNAKE GAME" << endl;
     cout << "=============================" << endl;
@@ -69,7 +55,6 @@ void displayMenu() { //menu completo que aparece sempre apos apertar a tecla Ent
 
 void iniciarNovoJogo(ModoDeJogo modo, NivelDificuldade nivel) {
     cout << "Iniciando novo jogo..." << endl;
-    // lógica para iniciar o jogo conforme o modo e nível selecionados
     if (modo == CARREIRA) {
         cout << "Modo: Carreira" << endl;
     } else if (modo == SOBREVIVENCIA) {
@@ -87,8 +72,6 @@ void iniciarNovoJogo(ModoDeJogo modo, NivelDificuldade nivel) {
             cout << "Nivel: Dificil" << endl;
             break;
     }
-
-    //Espaço para colocar funcoes que iniciem o jogo com base no nivel e modo selecionados
 }
 
 void Instrucoes() { 
@@ -164,12 +147,11 @@ void mostrarDiferencasNiveis() {
 
 void sairDoJogo() {
     cout << "Saindo do jogo..." << endl;
-    // Espaco para logica de armazenar progresso
 }
 
-void pausa(){ //evita que o menu apareça logo apos a funcao selecionada
+void pausa() {
     cout << "Pressione Enter para continuar. ";
-    cin.ignore(); //Ignora o caractere de nova linha
-    cin.get(); //Espera o pressionamento do Enter
+    cin.ignore();
+    cin.get();
     cout << endl;
 }
