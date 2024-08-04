@@ -13,5 +13,5 @@ public:
 private:
     //armazena as coordenadas
     COORD comidinha();
-}
+};
 #endif
