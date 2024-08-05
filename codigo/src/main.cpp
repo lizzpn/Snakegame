@@ -13,7 +13,7 @@ using namespace std;
 
 // Chamada da função da Cobra, com posição e velocidades arbitrárias
 Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
-
+ Food food()
 
 void board()
 {
@@ -54,6 +54,7 @@ int main()
     {
         // Programa rodando
         //todo adicionar funções
+
         //board() ->adicionar função do tabuleiro
 
         //kbhit(): verifica se alguma tecla foi pressionada no tabuleiro sem que tenha que parar o loop/programa
