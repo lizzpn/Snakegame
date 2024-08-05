@@ -11,13 +11,19 @@ using namespace std;
 #define x_tabuleiro 50
 #define y_tabuleiro 25
 
+// Variável de controle
+int primeiro_loop = 1;
+
 // Chamada da função da Cobra, com posição e velocidades arbitrárias
 Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
- Food food()
+
+// Chama classe comida
+Food comida(x_tabuleiro, y_tabuleiro);
 
 void board()
 {
     COORD cobra_posicao = cobra.obter_posicao();
+    COORD comida_posicao = comida.coor_comidinha();
     for(int i = 0; i < y_tabuleiro; i++)
     {
         //printando o tabuleiro com # em sua volta e espaços em branco no meio
@@ -25,16 +31,26 @@ void board()
         cout<<"\t\t#";
         for(int j = 0; j < x_tabuleiro; j++)
         {
-            if(i == 0 || i == y_tabuleiro - 1)
+            // Limites tabuleiro
+            if (i == 0 || i == y_tabuleiro - 1)
             {
-                cout<< '#';
+                cout << '#';
             }
-            else if(i == cobra_posicao.Y && j == cobra_posicao.X)
+            // Cria a cobra
+            else if (i == cobra_posicao.Y && j == cobra_posicao.X)
             {
-                cout<< "0";
+                cout << "0";
             }
-            //adicionar else if da comida
-            else cout<< ' ';
+            // Gera a comida
+            else if (i == comida_posicao.Y && j == comida_posicao.X)
+            {
+                if (primeiro_loop == 1 || cobra.comeu(comida_posicao))
+                {
+                    cout << "@";
+                }
+                primeiro_loop++;
+            }
+            else cout << ' ';
         }
         cout<<"#\n";
     }
@@ -55,7 +71,11 @@ int main()
         // Programa rodando
         //todo adicionar funções
 
-        //board() ->adicionar função do tabuleiro
+        // Gera uma comida aleatória
+        comida.criar_comidinha(x_tabuleiro, y_tabuleiro);
+
+        // Chamada do tabuleiro
+        board();
 
         //kbhit(): verifica se alguma tecla foi pressionada no tabuleiro sem que tenha que parar o loop/programa
         if(kbhit())
