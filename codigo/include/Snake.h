@@ -25,6 +25,8 @@ class Snake
         // Função que recebe a posição atual da cobra
         COORD obter_posicao();
 
+        int obter_tamanho();
+
         // Função para mudar a direção da cobra
         void mudar_direcao(char nova_direcao);
 

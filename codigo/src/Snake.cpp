@@ -22,6 +22,11 @@ COORD Snake::obter_posicao()
     return coordenadas;
 }
 
+int Snake::obter_tamanho()
+{
+    return tamanho_cobra;
+}
+
 void Snake::mudar_direcao(char nova_direcao)
 {
     // Atribui o novo parâmetro da direção à variável private
