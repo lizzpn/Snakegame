@@ -2,8 +2,8 @@
 #include <cstdlib>
 #include "Food.h"
 
-Food::Food(int x.tabuleiro, int y.tabuleiro){
-    criar_comidinha(int x.tabuleiro,int y.tabuleiro);
+Food::Food(int x_tabuleiro, int y_tabuleiro){
+    criar_comidinha(x_tabuleiro, y_tabuleiro);
 }
 
 void Food::criar_comidinha(int x_tabuleiro, int y_tabuleiro){
