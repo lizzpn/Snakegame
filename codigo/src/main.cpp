@@ -20,7 +20,7 @@ Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
 // Chama classe comida
 Food comida(x_tabuleiro, y_tabuleiro);
 
-
+int pontuacao;
 
 void board()
 {
@@ -32,7 +32,7 @@ void board()
     {
         //printando o tabuleiro com # em sua volta e espaços em branco no meio
         //rever como printar a cobrinha
-        cout<<"\t\t#";
+        cout << "\t\t#";
         for(int j = 0; j < x_tabuleiro; j++)
         {
             // Limites tabuleiro
@@ -53,7 +53,7 @@ void board()
             // Gera a cabeça da cobra 
             else if (i == cobra_posicao.Y && j == cobra_posicao.X)
             {
-                cout<< '0';
+                cout << '0';
             }
             // Gera o resto do corpo
             else 
@@ -61,20 +61,21 @@ void board()
                 bool FazParteDoCorpo = false;
                 for (int k = 0; k < cobra_corpo.size()-1; i++)
                 {
-                    if(i == cobra_corpo[k].Y && j+1 == cobra_corpo[k].X)
+                    if (i == cobra_corpo[k].Y && j+1 == cobra_corpo[k].X)
                     {
+                        // Caractere do resto do corpo
                         cout << 'o';
                         FazParteDoCorpo = false;
                         break;
                     }
                 }
-                if(!FazParteDoCorpo)
+                if (!FazParteDoCorpo)
                 {
                     cout << ' ';
                 }
             }
         }
-        cout<<"#\n";
+        cout << "#\n";
 
         // Controle das variáveis
         if (cobra.comeu(comida_posicao))
@@ -86,6 +87,9 @@ void board()
 
             // Aumenta o tamanho da cobra
             cobra.crescimento();
+
+            // Aumenta o score
+            pontuacao += 1;
         }
     }
 }
@@ -94,7 +98,9 @@ int main()
 {
     // Usar a hora atual como semente para o gerador de números aleatórios
     srand(time(0));
-    //todo Adicionar chamadas e classes
+    
+    // Inicialização da pontuação
+    pontuacao = 0;
     
     // Variável que controlará o loop que rodá o jogo
     bool fim_de_jogo = false;
@@ -124,11 +130,15 @@ int main()
                 case 's': cobra.mudar_direcao('b');
                 break;
             }
-            cobra.mover_cobra();
         }
 
         //! Condição do fim do jogo -> parada do loop
         if (cobra.colidiu()) fim_de_jogo = true;
+
+
+
+        // Move a cobra
+        cobra.mover_cobra();
 
         // Obtém o handle para o dispositivo de saída padrão (console)
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);

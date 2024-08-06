@@ -2,6 +2,9 @@
 #define SNAKE_H
 
 #include <windows.h>
+#include <vector>
+
+using namespace std;
 
 class Snake
 {
@@ -18,6 +21,8 @@ class Snake
         int velocidade_cobra;
         char direcao_cobra;
 
+        vector<COORD> corpo;
+
     public:
         // Construtor padrão: recebe a posição inicial da cobra e sua velocidade
         Snake(COORD posicao_inicial, int velocidade_inicial);
@@ -25,7 +30,8 @@ class Snake
         // Função que recebe a posição atual da cobra
         COORD obter_posicao();
 
-        int obter_tamanho();
+        // Função que recebe o tamanho atual da cobra
+        vector<COORD> obter_corpo();
 
         // Função para mudar a direção da cobra
         void mudar_direcao(char nova_direcao);
