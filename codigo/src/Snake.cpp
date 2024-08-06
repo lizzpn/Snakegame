@@ -15,6 +15,9 @@ Snake::Snake(COORD posicao_inicial, int velocidade_inicial)
 
     // Posição "nula", visto que a cobra é iniciada parada
     direcao_cobra = 'n';
+
+    // Aumento do tamanho da cobra
+    corpo.push_back(coordenadas);
 }
 
 COORD Snake::obter_posicao()
@@ -35,6 +38,7 @@ void Snake::mudar_direcao(char nova_direcao)
 
 void Snake::mover_cobra()
 {
+    // Move a cabeça
     switch(direcao_cobra)
     {
         //c: para cima
@@ -50,6 +54,11 @@ void Snake::mover_cobra()
         case 'd': coordenadas.X += velocidade_cobra; 
         break;
     }
+
+    // Mover o resto do corpo
+    corpo.push_back(coordenadas);
+
+    if (corpo.size() > tamanho_cobra) corpo.erase(corpo.begin());
 }
 //ao comer a comida a cobra aumenta 1 unidade de tamanho
 void Snake::crescimento()
