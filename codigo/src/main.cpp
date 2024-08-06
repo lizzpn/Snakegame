@@ -94,10 +94,10 @@ int main()
     Menu menu;
 
     // Exibe o menu
-    menu.displayMenu();
+    //menu.displayMenu();
     
     //limpar terminal
-    system("cls");
+    //system("cls");
     
     // Inicializa um novo jogo
     menu.iniciarNovoJogo(cobra, comida);
@@ -121,7 +121,7 @@ int main()
 
         // Chamada do tabuleiro
         board();
-        
+
         //limpa o terminal
         if(frames%20==0){
             system("cls");
@@ -147,7 +147,11 @@ int main()
         }
 
         //! Condição do fim do jogo -> parada do loop
-        if (cobra.colidiu()) fim_de_jogo = true;
+        if (cobra.colidiu()) 
+        {
+            fim_de_jogo = true;
+            menu.exibirTelaFinal();
+        }
 
         // Verifica se a cobra comeu a comida
         if (cobra.comeu(comida.coor_comidinha()))

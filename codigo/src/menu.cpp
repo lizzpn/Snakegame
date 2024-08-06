@@ -128,3 +128,8 @@ void Menu::solicitarNivelDificuldade() {
             break;
     }
 }
+
+void Menu::exibirTelaFinal(){
+    system("cls");
+    cout << "Fim de Jogo!" << endl;
+}
