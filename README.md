@@ -127,17 +127,17 @@ git clone https://github.com/lizzpn/Snakegame.git
 
 2° Entrar no diretório do projeto 
 ```
-cd snakegame/codigo/
+cd snakegame/codigo/src
 ```
 
-3° Compilar o projeto utilizando o arquivo Makefile
+3° Compilar o projeto
 ```
-Make all
+g++ -o programa *.cpp -I../include
 ```
 
 4° Executar o jogo
 ```
-./bin/snakegame.out
+.\programa.exe
 ```
 > [!TIP]
 > A página principal do repositório pode ser acessada pelo link a seguir:
