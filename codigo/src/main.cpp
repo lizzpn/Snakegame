@@ -10,9 +10,6 @@ using namespace std;
 // Definir o tamanho do tabuleiro
 #define x_tabuleiro 50
 #define y_tabuleiro 25
-//gabriel
-// Variável de controle
-int primeiro_loop = 1;
 
 // Chamada da função da Cobra, com posição e velocidades arbitrárias
 Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
@@ -47,53 +44,39 @@ void board()
             // Gera a comida
             else if (i == comida_posicao.Y && j + 1 == comida_posicao.X)
             {
-                if (primeiro_loop == 1 || cobra.comeu(comida_posicao))
-                {
-                    // todo verificar por que a segunda comida não spawna
-                    cout << "@";
-                }
+                cout << "@";
             }
+
             // Gera a cabeça da cobra 
             else if (i == cobra_posicao.Y && j + 1 == cobra_posicao.X)
             {
                 cout << "0";
             }
+
             // Gera o resto do corpo
             else 
             {
                 bool FazParteDoCorpo = false;
-                for (int k = 0; k < cobra_corpo.size()-1; i++)
+                for (int k = 0; k < cobra_corpo.size(); k++)
                 {
-                    if (i == cobra_corpo[k].Y && j+1 == cobra_corpo[k].X)
+                    if (i == cobra_corpo[k].Y && (j + 1) == cobra_corpo[k].X)
                     {
                         // Caractere do resto do corpo
                         cout << "o";
-                        FazParteDoCorpo = false;
+                        FazParteDoCorpo = true;
                         break;
                     }
                 }
+
                 if (!FazParteDoCorpo)
                 {
                     cout << " ";
                 }
             }
         }
+
+        // Impressão do limite inferior do tabuleiro
         cout << "#\n";
-
-        // Controle das variáveis
-        if (cobra.comeu(comida_posicao))
-        {
-            primeiro_loop++;
-
-            // Gera uma comida aleatória
-            comida.criar_comidinha(x_tabuleiro, y_tabuleiro);
-
-            // Aumenta o tamanho da cobra
-            cobra.crescimento();
-
-            // Aumenta o score
-            pontuacao += 1;
-        }
     }
 }
 
@@ -111,9 +94,7 @@ int main()
     // O jogo roda enquanto não a cobra não colidir
     while (!fim_de_jogo)
     {
-        // Programa rodando
-        //todo adicionar funções
-
+        //* Programa rodando
         // Chamada do tabuleiro
         board();
 
@@ -137,6 +118,19 @@ int main()
 
         //! Condição do fim do jogo -> parada do loop
         if (cobra.colidiu()) fim_de_jogo = true;
+
+        // Verifica se a cobra comeu a comida
+        if (cobra.comeu(comida.coor_comidinha()))
+        {
+            // Gera uma comida aleatória
+            comida.criar_comidinha(x_tabuleiro, y_tabuleiro);
+
+            // Aumenta o tamanho da cobra
+            cobra.crescimento();
+
+            // Aumenta o score
+            pontuacao += 1;
+        }
 
         // Move a cobra
         cobra.mover_cobra();
