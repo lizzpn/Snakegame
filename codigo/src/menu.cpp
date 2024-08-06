@@ -1,44 +1,44 @@
 #include "menu.h"
 
-int main() {
-    int escolha;
-    bool executando = true;
-    ModoDeJogo modoAtual = CARREIRA;
-    NivelDificuldade nivelAtual = FACIL;
+// int main() {
+//     int escolha;
+//     bool executando = true;
+//     ModoDeJogo modoAtual = CARREIRA;
+//     NivelDificuldade nivelAtual = FACIL;
 
-    while (executando) {
-        displayMenu();
-        cin >> escolha;
+//     while (executando) {
+//         displayMenu();
+//         cin >> escolha;
 
-        switch (escolha) {
-            case 1:
-                iniciarNovoJogo(modoAtual, nivelAtual);
-                pausa();
-                break;
-            case 2:
-                Instrucoes();
-                pausa();
-                break;
-            case 3:
-                alterarModoDeJogo(modoAtual);
-                pausa();
-                break;
-            case 4:
-                Dificuldade(nivelAtual);
-                pausa();
-                break;
-            case 5:
-                sairDoJogo();
-                executando = false;
-                break;
-            default:
-                cout << "Opcao invalida! Tente novamente." << endl;
-                pausa();
-        }
-    }
+//         switch (escolha) {
+//             case 1:
+//                 iniciarNovoJogo(modoAtual, nivelAtual);
+//                 pausa();
+//                 break;
+//             case 2:
+//                 Instrucoes();
+//                 pausa();
+//                 break;
+//             case 3:
+//                 alterarModoDeJogo(modoAtual);
+//                 pausa();
+//                 break;
+//             case 4:
+//                 Dificuldade(nivelAtual);
+//                 pausa();
+//                 break;
+//             case 5:
+//                 sairDoJogo();
+//                 executando = false;
+//                 break;
+//             default:
+//                 cout << "Opcao invalida! Tente novamente." << endl;
+//                 pausa();
+//         }
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 void displayMenu() {
     cout << "=============================" << endl;

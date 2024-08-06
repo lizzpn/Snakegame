@@ -2,8 +2,8 @@
 #include <ctime>
 #include <conio.h>
 
-#include "Snake.h"
-#include "Food.h"
+#include "../include/Snake.h"
+#include "../include/Food.h"
 
 using namespace std;
 
@@ -39,20 +39,36 @@ void board()
             // Cria a cobra
             else if (i == cobra_posicao.Y && j == cobra_posicao.X)
             {
-                cout << "0";
+                // todo arrumar impressao da cobra
+                // for (int tamanho = 0; tamanho <= cobra.obter_tamanho(); tamanho++)
+                // {
+                //     cout << "0";
+                // }
             }
             // Gera a comida
             else if (i == comida_posicao.Y && j == comida_posicao.X)
             {
                 if (primeiro_loop == 1 || cobra.comeu(comida_posicao))
                 {
+                    // todo verificar por que a segunda comida não spawna
                     cout << "@";
                 }
-                primeiro_loop++;
             }
             else cout << ' ';
         }
         cout<<"#\n";
+
+        // Controle das variáveis
+        if (cobra.comeu(comida_posicao))
+        {
+            primeiro_loop++;
+
+            // Gera uma comida aleatória
+            comida.criar_comidinha(x_tabuleiro, y_tabuleiro);
+
+            // Aumenta o tamanho da cobra
+            cobra.crescimento();
+        }
     }
 }
 
@@ -70,9 +86,6 @@ int main()
     {
         // Programa rodando
         //todo adicionar funções
-
-        // Gera uma comida aleatória
-        comida.criar_comidinha(x_tabuleiro, y_tabuleiro);
 
         // Chamada do tabuleiro
         board();
