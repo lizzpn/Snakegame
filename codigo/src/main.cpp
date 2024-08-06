@@ -29,18 +29,19 @@ void board()
     vector<COORD> cobra_corpo = cobra.obter_corpo();
 
     // Impressão do score
-    cout << "Pontuação: " << pontuacao << "\n\n";
+    cout << "SCORE: " << pontuacao << "\n\n";
 
     for(int i = 0; i < y_tabuleiro; i++)
     {
-        //printando o tabuleiro com # em sua volta e espaços em branco no meio
+        // Printando o tabuleiro com # em sua volta e espaços em branco no meio
         cout << "\t\t#";
+
         for(int j = 0; j < x_tabuleiro; j++)
         {
             // Limites tabuleiro
             if (i == 0 || i == y_tabuleiro - 1)
             {
-                cout << '#';
+                cout << "#";
             }
 
             // Gera a comida
@@ -49,13 +50,13 @@ void board()
                 if (primeiro_loop == 1 || cobra.comeu(comida_posicao))
                 {
                     // todo verificar por que a segunda comida não spawna
-                    cout << '@';
+                    cout << "@";
                 }
             }
             // Gera a cabeça da cobra 
             else if (i == cobra_posicao.Y && j + 1 == cobra_posicao.X)
             {
-                cout << '0';
+                cout << "0";
             }
             // Gera o resto do corpo
             else 
@@ -66,14 +67,14 @@ void board()
                     if (i == cobra_corpo[k].Y && j+1 == cobra_corpo[k].X)
                     {
                         // Caractere do resto do corpo
-                        cout << 'o';
+                        cout << "o";
                         FazParteDoCorpo = false;
                         break;
                     }
                 }
                 if (!FazParteDoCorpo)
                 {
-                    cout << ' ';
+                    cout << " ";
                 }
             }
         }
