@@ -105,12 +105,28 @@ int main()
     // Variável que controlará o loop que rodá o jogo
     bool fim_de_jogo = false;
 
+    //variavel para atualização de frames
+    int frames = 0;
+
     // O jogo roda enquanto não a cobra não colidir
     while (!fim_de_jogo)
     {
         //* Programa rodando
+
+        //Exibe modo de jogo
+        menu.exibirModo();
+
+        //Exibe Dificuldade do jogo
+        menu.exibirDificuldade();
+
         // Chamada do tabuleiro
         board();
+        
+        //limpa o terminal
+        if(frames%20==0){
+            system("cls");
+        }
+        frames++;
 
         //kbhit(): verifica se alguma tecla foi pressionada no tabuleiro sem que tenha que parar o loop/programa
         if(kbhit())

@@ -58,10 +58,10 @@ void Menu::exibirModo() {
     std::cout << "Modo de Jogo Selecionado: ";
     switch (modoDeJogo) {
         case CARREIRA:
-            std::cout << "Carreira\n\n" << std::endl;
+            std::cout << "Carreira" << std::endl;
             break;
         case SOBREVIVENCIA:
-            std::cout << "Sobrevivência\n\n" << std::endl;
+            std::cout << "Sobrevivência" << std::endl;
             break;
     }
 }
@@ -70,13 +70,13 @@ void Menu::exibirDificuldade() {
     std::cout << "Nível de Dificuldade Selecionado: ";
     switch (nivelDificuldade) {
         case FACIL:
-            std::cout << "Fácil\n" << std::endl;
+            std::cout << "Fácil" << std::endl;
             break;
         case MEDIO:
-            std::cout << "Médio\n" << std::endl;
+            std::cout << "Médio" << std::endl;
             break;
         case DIFICIL:
-            std::cout << "Difícil\n" << std::endl;
+            std::cout << "Difícil" << std::endl;
             break;
     }
 }
