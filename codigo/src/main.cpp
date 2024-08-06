@@ -28,10 +28,12 @@ void board()
     COORD comida_posicao = comida.coor_comidinha();
     vector<COORD> cobra_corpo = cobra.obter_corpo();
 
+    // Impressão do score
+    cout << "Pontuação: " << pontuacao << "\n\n";
+
     for(int i = 0; i < y_tabuleiro; i++)
     {
         //printando o tabuleiro com # em sua volta e espaços em branco no meio
-        //rever como printar a cobrinha
         cout << "\t\t#";
         for(int j = 0; j < x_tabuleiro; j++)
         {
@@ -42,7 +44,7 @@ void board()
             }
 
             // Gera a comida
-            else if (i == comida_posicao.Y && j == comida_posicao.X)
+            else if (i == comida_posicao.Y && j + 1 == comida_posicao.X)
             {
                 if (primeiro_loop == 1 || cobra.comeu(comida_posicao))
                 {
@@ -51,7 +53,7 @@ void board()
                 }
             }
             // Gera a cabeça da cobra 
-            else if (i == cobra_posicao.Y && j == cobra_posicao.X)
+            else if (i == cobra_posicao.Y && j + 1 == cobra_posicao.X)
             {
                 cout << '0';
             }
@@ -134,8 +136,6 @@ int main()
 
         //! Condição do fim do jogo -> parada do loop
         if (cobra.colidiu()) fim_de_jogo = true;
-
-
 
         // Move a cobra
         cobra.mover_cobra();
