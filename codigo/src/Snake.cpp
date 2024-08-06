@@ -22,9 +22,9 @@ COORD Snake::obter_posicao()
     return coordenadas;
 }
 
-int Snake::obter_tamanho()
+vector<COORD> Snake::obter_corpo()
 {
-    return tamanho_cobra;
+    return corpo;
 }
 
 void Snake::mudar_direcao(char nova_direcao)

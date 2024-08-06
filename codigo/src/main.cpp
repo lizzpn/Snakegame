@@ -20,10 +20,14 @@ Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
 // Chama classe comida
 Food comida(x_tabuleiro, y_tabuleiro);
 
+
+
 void board()
 {
     COORD cobra_posicao = cobra.obter_posicao();
     COORD comida_posicao = comida.coor_comidinha();
+    vector<COORD> cobra_corpo = cobra.obter_corpo();
+
     for(int i = 0; i < y_tabuleiro; i++)
     {
         //printando o tabuleiro com # em sua volta e espaços em branco no meio
@@ -36,25 +40,39 @@ void board()
             {
                 cout << '#';
             }
-            // Cria a cobra
-            else if (i == cobra_posicao.Y && j == cobra_posicao.X)
-            {
-                // todo arrumar impressao da cobra
-                // for (int tamanho = 0; tamanho <= cobra.obter_tamanho(); tamanho++)
-                // {
-                //     cout << "0";
-                // }
-            }
+
             // Gera a comida
             else if (i == comida_posicao.Y && j == comida_posicao.X)
             {
                 if (primeiro_loop == 1 || cobra.comeu(comida_posicao))
                 {
                     // todo verificar por que a segunda comida não spawna
-                    cout << "@";
+                    cout << '@';
                 }
             }
-            else cout << ' ';
+            // Gera a cabeça da cobra 
+            else if (i == cobra_posicao.Y && j == cobra_posicao.X)
+            {
+                cout<< '0';
+            }
+            // Gera o resto do corpo
+            else 
+            {
+                bool FazParteDoCorpo = false;
+                for (int k = 0; k < cobra_corpo.size()-1; i++)
+                {
+                    if(i == cobra_corpo[k].Y && j+1 == cobra_corpo[k].X)
+                    {
+                        cout << 'o';
+                        FazParteDoCorpo = false;
+                        break;
+                    }
+                }
+                if(!FazParteDoCorpo)
+                {
+                    cout << ' ';
+                }
+            }
         }
         cout<<"#\n";
 
