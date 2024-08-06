@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <conio.h>
+#include <iomanip>
 
 #include "../include/Snake.h"
 #include "../include/Food.h"
@@ -89,14 +90,17 @@ int main()
     // Inicialização da pontuação
     pontuacao = 0;
     
-    // // Criação do objeto Menu
-    // Menu menu;
+    // Criação do objeto Menu
+    Menu menu;
 
-    // // Exibe o menu
-    // menu.displayMenu();
-
-    // // Inicializa um novo jogo
-    // menu.iniciarNovoJogo(cobra, comida);
+    // Exibe o menu
+    menu.displayMenu();
+    
+    //limpar terminal
+    system("cls");
+    
+    // Inicializa um novo jogo
+    menu.iniciarNovoJogo(cobra, comida);
     
     // Variável que controlará o loop que rodá o jogo
     bool fim_de_jogo = false;
