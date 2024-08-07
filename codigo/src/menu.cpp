@@ -138,8 +138,23 @@ void Menu::sairDoJogo() {
 }
 
 void Menu::pausa() {
-    std::cout << "Jogo em pausa. Pressione qualquer tecla para continuar..." << std::endl;
-    getch();
+    char tecla;
+    cout << "Jogo em pausa." << std::endl;
+    cout <<  "0 - Continuar o jogo." << std::endl;
+    cout <<  "1 - Sair do jogo." << std::endl;
+    tecla = getch();
+    switch (tecla)
+    {
+    case '0':
+        break;
+    case '1':
+        cout << "Pressione 1 para confirmar saída. 2 para voltar." << endl;
+        tecla = getch();
+        if(tecla=='1'){
+            system("cls");
+            sairDoJogo();
+        }
+    }
 }
 
 void Menu::exibirTelaFinal(int pontuacao){
