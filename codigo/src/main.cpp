@@ -2,6 +2,7 @@
 #include <ctime>
 #include <conio.h>
 #include <iomanip>
+#include <locale>
 
 #include "../include/Snake.h"
 #include "../include/Food.h"
@@ -84,6 +85,10 @@ void board()
 
 int main()
 {
+    //! Faz o terminal imprimir os caracteres acentuados
+    setlocale(LC_ALL, "Portuguese_Brasil");
+    system("chcp 65001 > nul");
+
     // Usar a hora atual como semente para o gerador de números aleatórios
     srand(time(0));
     
