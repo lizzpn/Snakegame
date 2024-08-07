@@ -38,9 +38,11 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
      * Posso ver a pontuação atual em uma área visível da tela durante o jogo.
 
 **3. ESCOLHER NÍVEL DE DIFICULDADE**
-   * **Descrição:** Como um jogador, quero ser capaz de escolher diferentes níveis de dificuldade, para ajustar o desafio do jogo conforme meu nível de habilidade.
+   * **Descrição:** Como um jogador, quero ser capaz de saber a diferença entre os niveis de dificuldade e escolher diferentes níveis de dificuldade, para ajustar o desafio do jogo conforme meu nível de habilidade.
   
    * **Critérios de Aceitação:**
+
+     * Posso encontrar explicação clara sobre a diferença entre os três níveis de dificuldade.
 
      * Posso escolher entre pelo menos três níveis de dificuldade: fácil, médio e difícil.
     
@@ -69,13 +71,15 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
      * A cobra não pode se mover na direção oposta à que está se movendo atualmente (evitando movimentos reversos instantâneos).
 
 **2. TECLAS ESPECÍFICAS PARA SAIR DO JOGO**
-   * **Descrição:** Como um jogador, quero ser capaz de usar teclas específicas para pausar, para uma melhor experiência de usuário.
+   * **Descrição:** Como um jogador, quero ser capaz de usar teclas específicas para pausar e sair do jogo se for necessário, para uma melhor experiência de usuário.
   
    * **Critérios de Aceitação:**
 
      * Posso pressionar uma tecla específica (P) para pausar o jogo.
     
-     * Posso voltar para o jogo após pausar.
+     * Posso voltar para o jogo ou sair após pausar.
+    
+     * Gostaria que tivesse uma tela de confirmação caso escolha sair.
 
 **3. NOTIFICAÇÃO DE COLISÃO**
    * **Descrição:** Como um jogador, quero ser notificado quando a cobra colidir, para saber quando o jogo termina.
@@ -91,11 +95,11 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
 ### EXPERIENCIA DO USUÁRIO
 
 **1. INTERFACE DE USUÁRIO CLARA E INTUITIVA**
-   * **Descrição:** Como um jogador, quero ter uma interface de usuário clara e intuitiva, para navegar facilmente pelo menu e funcionalidades do jogo.
+   * **Descrição:** Como um jogador, quero ter uma interface de usuário clara e intuitiva, para navegar facilmente pelo menu, instruções e funcionalidades do jogo.
   
    * **Critérios de Aceitação:**
    
-     * O menu principal é fácil de navegar com opções claras como "Iniciar Jogo" e "Selecionar dificuldade".
+     * O menu principal é fácil de navegar com opções claras como "Iniciar Jogo", "Exibir instruções" e "Selecionar dificuldade".
 
 ## INSTALAÇÃO
 O jogo foi feito exclusivamente para o sistema operacional Windows, portanto é importante que o passo a passo seja efetuado em um ambiente Windows. Para instalar o projeto é necessario:
@@ -122,6 +126,10 @@ g++ -o programa *.cpp -I../include
 > [!TIP]
 > A página principal do repositório pode ser acessada pelo link a seguir:
 > https://github.com/lizzpn/Snakegame
+
+## EXCUSÃO
+
+Para uma melhor experiencia, execute o programa no teminal em tela cheia. A formatação do jogo foi toda pensando no terminal em tela cheia já que a taxa de atualização é extremamente importante para a fluidez. 
 
 ## DOCUMENTAÇÃO
 
