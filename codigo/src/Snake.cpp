@@ -33,7 +33,11 @@ vector<COORD> Snake::obter_corpo()
 void Snake::mudar_direcao(char nova_direcao)
 {
     // Atribui o novo parâmetro da direção à variável private
-    direcao_cobra = nova_direcao;
+    if (nova_direcao == 'b' && direcao_cobra == 'c') {} // Não faz nada
+    else if (nova_direcao == 'c' && direcao_cobra == 'b') {} // Não faz nada
+    else if (nova_direcao == 'd' && direcao_cobra == 'e') {} // Não faz nada 
+    else if (nova_direcao == 'e' && direcao_cobra == 'd') {} // Não faz nada 
+    else direcao_cobra = nova_direcao;
 }
 
 void Snake::mover_cobra()

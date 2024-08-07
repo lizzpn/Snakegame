@@ -118,7 +118,7 @@ int main()
             // Chamada do tabuleiro
             board();
 
-            // Limpa o terminal
+            // Limpa o terminal de acordo com o tempo
             if(frames%20==0){
                 system("cls");
             }
@@ -191,7 +191,7 @@ int main()
             // Controla a velocidade do jogo baseado na dificuldade
             if (menu.getNivelDificuldade() == menu.FACIL)
             {
-                Sleep(75); // Atraso de 75 milissegundos para controlar a velocidade do jogo 
+                Sleep(50); // Atraso de 75 milissegundos para controlar a velocidade do jogo 
             }
             else if (menu.getNivelDificuldade() == menu.MEDIO)
             {

@@ -5,6 +5,9 @@
 Menu::Menu() {
     // Exibe a primeira interface
     displayMenu();
+
+    // Inicializa a dificuldade no médio
+    nivelDificuldade = MEDIO;
 }
 
 void Menu::displayMenu() {
