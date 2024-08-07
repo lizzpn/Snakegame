@@ -129,7 +129,7 @@ void Menu::solicitarNivelDificuldade() {
     }
 }
 
-void Menu::exibirTelaFinal(){
-    system("cls");
+void Menu::exibirTelaFinal(int pontuacao){
     cout << "Fim de Jogo!" << endl;
+    cout << "Pontuação Final: " << pontuacao << endl;
 }

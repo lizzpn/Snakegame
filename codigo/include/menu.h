@@ -26,10 +26,11 @@ public:
     void pausa(); // Coloca o jogo em pausa
     void exibirModo(); // Exibe o modo de jogo atual
     void exibirDificuldade(); // Exibe o nível de dificuldade atual
-    void exibirTelaFinal(); // Exibe a tela final
+    void exibirTelaFinal(int pontuacao); // Exibe a tela final
 private:
     ModoDeJogo modoDeJogo; // Armazena o modo de jogo atual
     NivelDificuldade nivelDificuldade; // Armazena o nível de dificuldade atual
+
 
     void solicitarModoDeJogo(); // Solicita o modo de jogo ao usuário
     void solicitarNivelDificuldade(); // Solicita o nível de dificuldade ao usuário

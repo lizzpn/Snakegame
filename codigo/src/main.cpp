@@ -103,13 +103,13 @@ int main()
     menu.iniciarNovoJogo(cobra, comida);
     
     // Variável que controlará o loop que rodá o jogo
-    bool fim_de_jogo = false;
+    //bool fim_de_jogo = false;
 
     //variavel para atualização de frames
     int frames = 0;
 
     // O jogo roda enquanto não a cobra não colidir
-    while (!fim_de_jogo)
+    while (1)
     {
         //* Programa rodando
 
@@ -119,14 +119,14 @@ int main()
         //Exibe Dificuldade do jogo
         menu.exibirDificuldade();
 
-        // Chamada do tabuleiro
-        board();
-
-        //limpa o terminal
+        //limpar terminal
         if(frames%20==0){
             system("cls");
         }
         frames++;
+
+        // Chamada do tabuleiro
+        board();
 
         //kbhit(): verifica se alguma tecla foi pressionada no tabuleiro sem que tenha que parar o loop/programa
         if(kbhit())
@@ -147,10 +147,11 @@ int main()
         }
 
         //! Condição do fim do jogo -> parada do loop
-        if (cobra.colidiu()) 
-        {
-            fim_de_jogo = true;
-            menu.exibirTelaFinal();
+        if (cobra.colidiu()) {
+            //fim_de_jogo = true;
+            system("cls");
+            menu.exibirTelaFinal(pontuacao);
+            exit(1);
         }
 
         // Verifica se a cobra comeu a comida
