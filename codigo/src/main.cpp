@@ -97,7 +97,7 @@ int main()
     menu.iniciarNovoJogo(cobra, comida);
     
     // Variável que controlará o loop que rodá o jogo
-    bool fim_de_jogo = false;
+    //bool fim_de_jogo = false;
 
     //variavel para atualização de frames
     int frames = 0;
@@ -107,6 +107,28 @@ int main()
     {
         // O jogo roda enquanto não a cobra não colidir
         while (!fim_de_jogo)
+    // O jogo roda enquanto não a cobra não colidir
+    while (1)
+    {
+        //* Programa rodando
+
+        //Exibe modo de jogo
+        menu.exibirModo();
+
+        //Exibe Dificuldade do jogo
+        menu.exibirDificuldade();
+
+        //limpar terminal
+        if(frames%20==0){
+            system("cls");
+        }
+        frames++;
+
+        // Chamada do tabuleiro
+        board();
+
+        //kbhit(): verifica se alguma tecla foi pressionada no tabuleiro sem que tenha que parar o loop/programa
+        if(kbhit())
         {
             //* Programa rodando
 
@@ -169,6 +191,39 @@ int main()
             // Move o cursor do console para a posição especificada em 'pos'
             SetConsoleCursorPosition(hConsole, pos);        
         }
+
+        //! Condição do fim do jogo -> parada do loop
+        if (cobra.colidiu()) {
+            //fim_de_jogo = true;
+            system("cls");
+            menu.exibirTelaFinal(pontuacao);
+            exit(1);
+        }
+
+        // Verifica se a cobra comeu a comida
+        if (cobra.comeu(comida.coor_comidinha()))
+        {
+            // Gera uma comida aleatória
+            comida.criar_comidinha(x_tabuleiro, y_tabuleiro);
+
+            // Aumenta o tamanho da cobra
+            cobra.crescimento();
+
+            // Aumenta o score
+            pontuacao += 1;
+        }
+
+        // Move a cobra
+        cobra.mover_cobra();
+
+        // Obtém o handle para o dispositivo de saída padrão (console)
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+        // Define a estrutura COORD com a posição (0, 0) - canto superior esquerdo do console
+        COORD pos = {0, 0};
+
+        // Move o cursor do console para a posição especificada em 'pos'
+        SetConsoleCursorPosition(hConsole, pos);        
     }
     
     return 0;

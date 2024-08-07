@@ -27,10 +27,15 @@ public:
 
     // Variável de controle
     bool inicio_jogo = false;
+    void exibirModo(); // Exibe o modo de jogo atual
+    void exibirDificuldade(); // Exibe o nível de dificuldade atual
+    void exibirTelaFinal(int pontuacao); // Exibe a tela final
 private:
     NivelDificuldade nivelDificuldade; // Armazena o nível de dificuldade atual
 
     void exibirDificuldade(); // Exibe o nível de dificuldade atual
+
+    void solicitarModoDeJogo(); // Solicita o modo de jogo ao usuário
     void solicitarNivelDificuldade(); // Solicita o nível de dificuldade ao usuário
 };
 
