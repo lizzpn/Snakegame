@@ -188,7 +188,16 @@ int main()
             // Move o cursor do console para a posição especificada em 'pos'
             SetConsoleCursorPosition(hConsole, pos);
 
-            Sleep(100); // Atraso de 100 milissegundos para controlar a velocidade do jogo       
+            // Controla a velocidade do jogo baseado na dificuldade
+            if (menu.getNivelDificuldade() == menu.FACIL)
+            {
+                Sleep(75); // Atraso de 75 milissegundos para controlar a velocidade do jogo 
+            }
+            else if (menu.getNivelDificuldade() == menu.MEDIO)
+            {
+                Sleep(25); // Atraso de 100 milissegundos para controlar a velocidade do jogo   
+            }
+            else if (menu.getNivelDificuldade() == menu.DIFICIL) {} // Sem atraso        
         }
     }
     

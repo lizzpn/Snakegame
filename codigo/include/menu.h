@@ -24,6 +24,7 @@ public:
     void sairDoJogo(); // Sai do jogo
     void pausa(); // Coloca o jogo em pausa
     void exibirTelaFinal(int pontuacao); // Exibe a tela final
+    NivelDificuldade getNivelDificuldade() const; // Retorna a dificuldade
 
     // Variável de controle
     bool inicio_jogo = false;
