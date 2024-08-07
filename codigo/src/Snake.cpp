@@ -20,6 +20,19 @@ Snake::Snake(COORD posicao_inicial, int velocidade_inicial)
     corpo.push_back(coordenadas);
 }
 
+void Snake::reset()
+{
+    coordenadas = {x_tabuleiro/2, y_tabuleiro/2};
+    tamanho_cobra = 1;
+    direcao_cobra = 'n';
+
+    // Reinicia o corpo
+    for (auto it : corpo)
+    {
+        corpo.erase(corpo.begin());
+    }
+}
+
 COORD Snake::obter_posicao()
 {
     return coordenadas;

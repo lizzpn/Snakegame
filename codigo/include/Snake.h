@@ -27,6 +27,9 @@ class Snake
         // Construtor padrão: recebe a posição inicial da cobra e sua velocidade
         Snake(COORD posicao_inicial, int velocidade_inicial);
 
+        // Reseta as variáveis iniciadas no construtor
+        void reset();
+
         // Função que recebe a posição atual da cobra
         COORD obter_posicao();
 

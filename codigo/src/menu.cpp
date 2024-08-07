@@ -62,12 +62,8 @@ void Menu::telaInicial()
 
 }
 
-void Menu::iniciarNovoJogo(Snake& snake, Food& food) {
-    // Inicializa um novo jogo, possivelmente resetando o estado do Snake e Food
-    // snake.reset(); // Reseta o estado da Snake -->avaliar criação dos métodos
-    // food.generateNewPosition(snake.getSnakeBody()); // Gera uma nova posição para a Food
-    std::cout << "Novo jogo iniciado." << std::endl;
-    exibirDificuldade(); // Exibe o nível de dificuldade atual
+void Menu::iniciarNovoJogo(Snake& snake) {
+    displayMenu();
 }
 
 void Menu::exibirInstrucoes() {

@@ -97,9 +97,6 @@ int main()
     
     // Criação da classe Menu,
     Menu menu;
-    
-    // Variável que controlará o loop que rodá o jogo
-    bool fim_de_jogo = false;
 
     //variavel para atualização de frames
     int frames = 0;
@@ -157,7 +154,14 @@ int main()
             {
                 system("cls");
                 menu.exibirTelaFinal(pontuacao);
-                exit(1);
+
+                // Reseta os dados da cobra caso o usuário queira jogar novamente
+                cobra.reset();
+
+                // Reseta o menu, para que o usuário possa jogar novamente
+                menu.iniciarNovoJogo(cobra);
+                pontuacao = 0;
+                frames = 0;
             }
 
             // Verifica se a cobra comeu a comida

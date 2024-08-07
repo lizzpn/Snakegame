@@ -17,7 +17,7 @@ public:
 
     // Funções adicionais
     void telaInicial(); // Interface inicial
-    void iniciarNovoJogo(Snake& snake, Food& food); // Inicia um novo jogo
+    void iniciarNovoJogo(Snake& snake); // Inicia um novo jogo
     void exibirInstrucoes(); // Exibe instruções do jogo
     void alterarNivelDificuldade(); // Altera o nível de dificuldade
     void mostrarDiferencasNiveis(); // Mostra as diferenças entre os níveis
