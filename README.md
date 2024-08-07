@@ -141,5 +141,8 @@ Durante o jogo, é possível visualizar a pontuação atual  O jogo permite esco
 
 Os controles são simples, utilizando as teclas de A, W, S e D para movimentar a cobra, e uma tecla específica (P) para pausar o jogo, com um prompt de confirmação para evitar saídas acidentais. A interface é clara e intuitiva, com um menu principal de fácil navegação, e o jogo notifica o jogador com uma mensagem de "Game Over" quando ocorre uma colisão.
 
+### Dificuldades encontradas aos longo do projeto
+Durante o desenvolvimento do jogo, as maiorrs dificuldades foram definir a velocidade da cobra, como pausar o jogo e em entender como o tratamento de excessão encaixaria no projeto. Sobre o tratamento de excessões, é utilizado as regras como forma de medir esse tratamento, por exemplo, não dever ser possivel que o jogador digite uma letra aleatoria no menu e se isso acontecer o jogo avisa e pede uma resposta válida. Outro exemplo é evitar que a cobrar vire para direção oposta pois se isso acontecer a cobrar terá "se comido" e perderá, então definimos que se a pessoa desse o comando para a cobra ir na direção oposta esse comando seria simplesmente ignorado.
+
 > [!IMPORTANT]
 > Uma sessão dedicada à documentação pode ser acessada no arquivo [docs](https://github.com/lizzpn/Snakegame/tree/main/docs) desse repositório
