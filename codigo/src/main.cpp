@@ -98,9 +98,6 @@ int main()
     // Criação da classe Menu,
     Menu menu;
     
-    // Inicializa um novo jogo
-    menu.iniciarNovoJogo(cobra, comida);
-    
     // Variável que controlará o loop que rodá o jogo
     bool fim_de_jogo = false;
 

@@ -26,14 +26,17 @@ void Menu::telaInicial()
     {
 
         std::cout << "Escolha uma opção:" << std::endl;
-        std::cout << "0 - Exibir instruções do jogo; " << std::endl;
-        std::cout << "1 - Exibir diferença entre dificuldades;" << std::endl;
+        std::cout << "0 - Exibir instruções do jogo" << std::endl;
+        std::cout << "1 - Exibir diferença entre dificuldades" << std::endl;
         std::cout << "2 - Selecionar dificuldade de jogo" << std::endl;
         std::cout << "3 - Iniciar jogo" << std::endl;
         std::cout << "4 - Sair" << std::endl;
 
         std::cout << "Escolha: ";
         std::cin >> opcao;
+
+        // Polidez
+        system("cls");
     
         switch (opcao) {
         case 0:
@@ -76,9 +79,9 @@ void Menu::exibirInstrucoes() {
 
 void Menu::mostrarDiferencasNiveis() {
     std::cout << "\nDiferenças entre os níveis: Fácil, Médio, Difícil." << std::endl;
-    std::cout << "Fácil: Menor velocidade, menos obstáculos." << std::endl;
-    std::cout << "Médio: Velocidade moderada, alguns obstáculos." << std::endl;
-    std::cout << "Difícil: Maior velocidade, mais obstáculos.\n" << std::endl;
+    std::cout << "Fácil: Menor velocidade." << std::endl;
+    std::cout << "Médio: Velocidade moderada." << std::endl;
+    std::cout << "Difícil: Maior velocidade.\n" << std::endl;
 }
 
 void Menu::alterarNivelDificuldade() {
