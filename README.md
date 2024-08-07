@@ -69,13 +69,13 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
      * A cobra não pode se mover na direção oposta à que está se movendo atualmente (evitando movimentos reversos instantâneos).
 
 **2. TECLAS ESPECÍFICAS PARA SAIR DO JOGO**
-   * **Descrição:** Como um jogador, quero ser capaz de usar teclas específicas para sair do jogo, para uma melhor experiência de usuário.
+   * **Descrição:** Como um jogador, quero ser capaz de usar teclas específicas para pausar, para uma melhor experiência de usuário.
   
    * **Critérios de Aceitação:**
 
-     * Posso pressionar uma tecla específica (por exemplo, 'Esc') para sair do jogo.
+     * Posso pressionar uma tecla específica (P) para pausar o jogo.
     
-     * Um prompt de confirmação aparece antes de sair do jogo para evitar saídas acidentais.
+     * Posso voltar para o jogo após pausar.
 
 **3. NOTIFICAÇÃO DE COLISÃO**
    * **Descrição:** Como um jogador, quero ser notificado quando a cobra colidir, para saber quando o jogo termina.
