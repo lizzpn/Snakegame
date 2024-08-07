@@ -1,8 +1,8 @@
 #include "Snake.h"
 
 // Definir o tamanho do tabuleiro
-#define x_tabuleiro 50
-#define y_tabuleiro 25
+#define x_tabuleiro 60
+#define y_tabuleiro 30
 
 Snake::Snake(COORD posicao_inicial, int velocidade_inicial)
 {

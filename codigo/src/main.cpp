@@ -11,8 +11,8 @@
 using namespace std;
 
 // Definir o tamanho do tabuleiro
-#define x_tabuleiro 50
-#define y_tabuleiro 25
+#define x_tabuleiro 60
+#define y_tabuleiro 30
 
 // Chamada da função da Cobra, com posição e velocidades arbitrárias
 Snake cobra({x_tabuleiro/2, y_tabuleiro/2}, 1);
