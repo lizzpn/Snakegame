@@ -67,6 +67,7 @@ void Menu::iniciarNovoJogo(Snake& snake, Food& food) {
 void Menu::exibirInstrucoes() {
     std::cout << "\nInstruções do Jogo: Use as W, A, S e D para mover a cobra." << std::endl;
     std::cout << "Coma os alimentos para crescer e pontuar o máximo possível." << std::endl;
+    std::cout << "Aperte P a qualquer momento para pausar o jogo." << std::endl;
     std::cout << "Boa diversão!" << "\n\n";
 }
 

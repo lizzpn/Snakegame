@@ -186,7 +186,9 @@ int main()
             COORD pos = {0, 0};
 
             // Move o cursor do console para a posição especificada em 'pos'
-            SetConsoleCursorPosition(hConsole, pos);        
+            SetConsoleCursorPosition(hConsole, pos);
+
+            Sleep(100); // Atraso de 100 milissegundos para controlar a velocidade do jogo       
         }
     }
     
