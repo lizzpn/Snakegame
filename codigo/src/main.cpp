@@ -130,15 +130,28 @@ int main()
                 //getch(): retotna a tecla pressionada pelo usuário 
                 switch(getch())
                 {
-                    //aloca as teclas "w,a,s,d" para os caracteres cima, baixo, direite e esquerda
-                    case 'w': cobra.mudar_direcao('c');
-                    break;
-                    case 'd': cobra.mudar_direcao('d');
-                    break;
-                    case 'a': cobra.mudar_direcao('e');
-                    break;
-                    case 's': cobra.mudar_direcao('b');
-                    break;
+                    // Aloca as teclas "w,a,s,d" para os caracteres cima, baixo, direite e esquerda
+                    case 'w':
+                    case 'W':
+                        cobra.mudar_direcao('c');
+                        break;
+                    case 'd':
+                    case 'D':
+                        cobra.mudar_direcao('d');
+                        break;
+                    case 'a':
+                    case 'A':
+                        cobra.mudar_direcao('e');
+                        break;
+                    case 's':
+                    case 'S':
+                        cobra.mudar_direcao('b');
+                        break;
+                    case 'p':
+                    case 'P':
+                        system("cls");
+                        menu.pausa();
+                        system("cls");
                 }
             }
 

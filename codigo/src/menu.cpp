@@ -1,4 +1,5 @@
 #include "menu.h"
+#include <conio.h>
 
 // Construtor que imprime o menu
 Menu::Menu() {
@@ -60,7 +61,6 @@ void Menu::iniciarNovoJogo(Snake& snake, Food& food) {
     // snake.reset(); // Reseta o estado da Snake -->avaliar criação dos métodos
     // food.generateNewPosition(snake.getSnakeBody()); // Gera uma nova posição para a Food
     std::cout << "Novo jogo iniciado." << std::endl;
-    //exibirModo(); // Exibe o modo de jogo atual
     exibirDificuldade(); // Exibe o nível de dificuldade atual
 }
 
@@ -131,7 +131,7 @@ void Menu::sairDoJogo() {
 
 void Menu::pausa() {
     std::cout << "Jogo em pausa. Pressione qualquer tecla para continuar..." << std::endl;
-    std::cin.get(); // Espera por entrada do usuário
+    getch();
 }
 
 void Menu::exibirTelaFinal(int pontuacao){
