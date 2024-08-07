@@ -106,7 +106,7 @@ int main()
     if (menu.inicio_jogo)
     {
         // O jogo roda enquanto não a cobra não colidir
-        while (!fim_de_jogo)
+        while (1)
         {
             //* Programa rodando
 
@@ -140,8 +140,9 @@ int main()
             //! Condição do fim do jogo -> parada do loop
             if (cobra.colidiu()) 
             {
-                fim_de_jogo = true;
-                menu.exibirTelaFinal();
+                system("cls");
+                menu.exibirTelaFinal(pontuacao);
+                exit(1);
             }
 
             // Verifica se a cobra comeu a comida

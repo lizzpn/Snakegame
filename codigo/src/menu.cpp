@@ -134,7 +134,7 @@ void Menu::pausa() {
     std::cin.get(); // Espera por entrada do usuário
 }
 
-void Menu::exibirTelaFinal(){
-    system("cls");
+void Menu::exibirTelaFinal(int pontuacao){
     cout << "Fim de Jogo!" << endl;
+    cout << "Pontuação Final: " << pontuacao << endl;
 }

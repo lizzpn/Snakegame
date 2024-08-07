@@ -23,7 +23,7 @@ public:
     void mostrarDiferencasNiveis(); // Mostra as diferenças entre os níveis
     void sairDoJogo(); // Sai do jogo
     void pausa(); // Coloca o jogo em pausa
-    void exibirTelaFinal(); // Exibe a tela final
+    void exibirTelaFinal(int pontuacao); // Exibe a tela final
 
     // Variável de controle
     bool inicio_jogo = false;
