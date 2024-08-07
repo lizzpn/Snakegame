@@ -125,9 +125,9 @@ Para instalar o projeto é necessario:
 git clone https://github.com/lizzpn/Snakegame.git
 ```
 
-2° Entrar no diretório do projeto 
+2° Entrar no diretório do código 
 ```
-cd snakegame/codigo/src
+cd ./codigo/src
 ```
 
 3° Compilar o projeto
