@@ -133,7 +133,7 @@ Menu::NivelDificuldade Menu::getNivelDificuldade() const
 }
 
 void Menu::sairDoJogo() {
-    std::cout << "Sair do jogo." << std::endl;
+    std::cout << "Você saiu do jogo." << std::endl;
     exit(0); // Sai do programa
 }
 
