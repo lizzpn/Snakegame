@@ -12,7 +12,8 @@ Trabalho de Programação e Desenvolvimento de Software II
 ## ÍNDICE
 1. [USER STORIES](#user-stories)
 2. [INSTALAÇÃO](#instalação)
-3. [DOCUMENTAÇÃO](#documentação)
+3. [EXECUÇÃO](#execução)
+4. [DOCUMENTAÇÃO](#documentação)
 
 ## USER STORIES
 As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a seguir:
@@ -102,7 +103,7 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
      * O menu principal é fácil de navegar com opções claras como "Iniciar Jogo", "Exibir instruções" e "Selecionar dificuldade".
 
 ## INSTALAÇÃO
-O jogo foi feito exclusivamente para o sistema operacional Windows, portanto é importante que o passo a passo seja efetuado em um ambiente Windows. Para instalar o projeto é necessario:
+O jogo foi desenvolvido exclusivamente para o sistema operacional Windows, portanto, é importante que o passo a passo seja seguido nesse ambiente. Para instalar o projeto, é necessário:
 
 1° Clonar o repositorio
 ```
@@ -127,9 +128,9 @@ g++ -o programa *.cpp -I../include
 > A página principal do repositório pode ser acessada pelo link a seguir:
 > https://github.com/lizzpn/Snakegame
 
-## EXCUSÃO
+## EXECUÇÃO
 
-Para uma melhor experiencia, execute o programa no teminal em tela cheia. A formatação do jogo foi toda pensando no terminal em tela cheia já que a taxa de atualização é extremamente importante para a fluidez. 
+Para uma experiência ideal, execute o programa em tela cheia no terminal. Toda a formatação do jogo foi projetada considerando o uso do terminal em tela cheia, já que a taxa de atualização é crucial para a fluidez. 
 
 ## DOCUMENTAÇÃO
 
@@ -145,12 +146,14 @@ No jogo, o usuário controla uma “cobrinha” em um ambiente delimitado. O obj
 
 O sistema do Snake Game oferece uma variedade de funcionalidades voltadas para uma experiência de jogo envolvente e personalizada. Os jogadores podem iniciar um novo jogo a partir do menu principal, com a cobra posicionada em uma posição inicial padrão e a pontuação “resetada”. 
 
-Durante o jogo, é possível visualizar a pontuação atual  O jogo permite escolher entre três níveis de dificuldade (fácil, médio e difícil), que influenciam a velocidade da cobra. Devido ao cresmento da cobra, mesmo no nivel facil a dificuldade aumenta gradativamente trazendo desafio para todos os usuarios.
+Durante o jogo, é possível visualizar a pontuação atual. O jogo permite escolher entre três níveis de dificuldade (fácil, médio e difícil), que influenciam a velocidade da cobra. Devido ao crescimento da cobra, mesmo no nível fácil, a dificuldade aumenta gradativamente, proporcionando um desafio para todos os usuários.
 
-Os controles são simples, utilizando as teclas de A, W, S e D para movimentar a cobra, e uma tecla específica (P) para pausar o jogo, com um prompt de confirmação para evitar saídas acidentais. A interface é clara e intuitiva, com um menu principal de fácil navegação, e o jogo notifica o jogador com uma mensagem de "Game Over" quando ocorre uma colisão.
+Os controles são simples, utilizando as teclas de W, A, S e D para movimentar a cobra, e uma tecla específica 'P' para pausar o jogo, com um prompt de confirmação para evitar saídas acidentais. A interface é clara e intuitiva, com um menu principal de fácil navegação. O jogo notifica o jogador com uma mensagem de "Game Over" quando ocorre uma colisão.
 
 ### Dificuldades encontradas aos longo do projeto
-Durante o desenvolvimento do jogo, as maiorrs dificuldades foram definir a velocidade da cobra, como pausar o jogo e em entender como o tratamento de excessão encaixaria no projeto. Sobre o tratamento de excessões, é utilizado as regras como forma de medir esse tratamento, por exemplo, não dever ser possivel que o jogador digite uma letra aleatoria no menu e se isso acontecer o jogo avisa e pede uma resposta válida. Outro exemplo é evitar que a cobrar vire para direção oposta pois se isso acontecer a cobrar terá "se comido" e perderá, então definimos que se a pessoa desse o comando para a cobra ir na direção oposta esse comando seria simplesmente ignorado.
+Durante o desenvolvimento do jogo, as maiores dificuldades foram definir a velocidade da cobra, como pausar o jogo e entender como o tratamento de exceções se encaixaria no projeto. Sobre o tratamento de exceções, são utilizadas regras para atingir esse ponto. Por exemplo, não deve ser possível que o jogador digite uma letra aleatória no menu; se isso acontecer, é pedido uma resposta válida. Outro exemplo é evitar que a cobra vire para a direção oposta, pois, se isso ocorrer, ela "se comerá" e perderá. Então, definimos que, se o jogador der o comando para a cobra ir na direção oposta, esse comando será simplesmente ignorado.
+
+
 
 > [!IMPORTANT]
 > Uma sessão dedicada à documentação pode ser acessada no arquivo [docs](https://github.com/lizzpn/Snakegame/tree/main/docs) desse repositório
