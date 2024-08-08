@@ -39,7 +39,7 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
      * Posso ver a pontuação atual em uma área visível da tela durante o jogo.
 
 **3. ESCOLHER NÍVEL DE DIFICULDADE**
-   * **Descrição:** Como um jogador, quero ser capaz de saber a diferença entre os niveis de dificuldade e escolher diferentes níveis de dificuldade, para ajustar o desafio do jogo conforme meu nível de habilidade.
+   * **Descrição:** Como um jogador, quero ser capaz de saber a diferença entre os níveis de dificuldade e escolher entre eles, para ajustar o desafio do jogo conforme meu nível de habilidade.
   
    * **Critérios de Aceitação:**
 
@@ -93,7 +93,7 @@ As funcionalidades do sistema do ponto de vista do usuário estão detalhadas a 
     
      * Uma mensagem de "Fim de Jogo!" aparece na tela após uma colisão.
 
-### EXPERIENCIA DO USUÁRIO
+### EXPERIÊNCIA DO USUÁRIO
 
 **1. INTERFACE DE USUÁRIO CLARA E INTUITIVA**
    * **Descrição:** Como um jogador, quero ter uma interface de usuário clara e intuitiva, para navegar facilmente pelo menu, instruções e funcionalidades do jogo.
